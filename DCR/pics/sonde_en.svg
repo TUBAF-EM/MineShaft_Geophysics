@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   version="1.1"
+   id="svg1"
+   width="600"
+   height="100"
+   viewBox="0 0 600 100"
+   sodipodi:docname="sonde_en.svg"
+   inkscape:version="1.4.2 (ebf0e94, 2025-05-08)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs1" />
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="1.4466667"
+     inkscape:cx="300"
+     inkscape:cy="50.115207"
+     inkscape:window-width="1920"
+     inkscape:window-height="1163"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="g1">
+    <inkscape:page
+       x="0"
+       y="0"
+       inkscape:label="1"
+       id="page1"
+       width="600"
+       height="100"
+       margin="0"
+       bleed="0" />
+  </sodipodi:namedview>
+  <g
+     id="g1"
+     inkscape:groupmode="layer"
+     inkscape:label="1">
+    <path
+       id="path1"
+       d="M 36.023,39.555 H 52.234 V 24.465 H 36.023 Z"
+       style="fill:#c2c2c2;fill-opacity:1;fill-rule:evenodd;stroke:#1f1917;stroke-width:0.216;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+       transform="matrix(1.3333333,0,0,-1.3333333,0,100)" />
+    <path
+       id="path2"
+       d="M 52.234,39.555 H 170.742 V 24.465 H 52.234 Z"
+       style="fill:#c2c2c2;fill-opacity:1;fill-rule:evenodd;stroke:#1f1917;stroke-width:0.216;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+       transform="matrix(1.3333333,0,0,-1.3333333,0,100)" />
+    <path
+       id="path3"
+       d="m 170.742,39.555 h 29.625 v -15.09 h -29.625 z"
+       style="fill:#c2c2c2;fill-opacity:1;fill-rule:evenodd;stroke:#1f1917;stroke-width:0.216;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+       transform="matrix(1.3333333,0,0,-1.3333333,0,100)" />
+    <path
+       id="path4"
+       d="m 200.32,39.555 h 120 v -15.09 h -120 z"
+       style="fill:#c2c2c2;fill-opacity:1;fill-rule:evenodd;stroke:#1f1917;stroke-width:0.216;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+       transform="matrix(1.3333333,0,0,-1.3333333,0,100)" />
+    <path
+       id="path5"
+       d="m 320.41,39.555 h 45.215 V 24.465 H 320.41 Z"
+       style="fill:#c2c2c2;fill-opacity:1;fill-rule:evenodd;stroke:#1f1917;stroke-width:0.216;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+       transform="matrix(1.3333333,0,0,-1.3333333,0,100)" />
+    <text
+       id="text5"
+       xml:space="preserve"
+       transform="matrix(1.3333333,0,0,1.3333333,48.031733,78.561733)"><tspan
+         id="tspan5"
+         style="font-variant:normal;font-weight:normal;font-size:10px;font-family:'Liberation Serif';writing-mode:lr-tb;fill:#1f1917;fill-opacity:1;fill-rule:nonzero;stroke:none"
+         x="0"
+         dx="0 0 0 0 36.794201 0 0 76.257599 0 0 69.235298 0 0 60.490002 0 0 0"
+         y="0"
+         dy="0 0 0 0 0.51590002 0 0 0.55900002 0 0 -0.55900002 0 0 0 0 0 0">0.050.40.10.40.15        offset in m</tspan></text>
+    <path
+       id="path6"
+       d="m 365.484,31.73 h 69.875"
+       style="fill:none;stroke:#1f1917;stroke-width:1.0001;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+       transform="matrix(1.3333333,0,0,-1.3333333,0,100)" />
+    <text
+       id="text6"
+       xml:space="preserve"
+       transform="matrix(1.3333333,0,0,1.3333333,204.52,28.957733)"><tspan
+         id="tspan6"
+         style="font-variant:normal;font-weight:normal;font-size:10px;font-family:'Liberation Serif';writing-mode:lr-tb;fill:#1f1917;fill-opacity:1;fill-rule:nonzero;stroke:none"
+         x="0"
+         y="0">ring electrodes</tspan></text>
+    <path
+       id="path7"
+       d="m 52.27,41.141 94.472,14.535"
+       style="fill:none;stroke:#1f1917;stroke-width:0.216;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+       transform="matrix(1.3333333,0,0,-1.3333333,0,100)" />
+    <path
+       id="path8"
+       d="M 320.586,41.699 218.293,56.234"
+       style="fill:none;stroke:#1f1917;stroke-width:0.216;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+       transform="matrix(1.3333333,0,0,-1.3333333,0,100)" />
+    <path
+       id="path9"
+       d="m 170.777,42.258 v 6.707"
+       style="fill:none;stroke:#1f1917;stroke-width:0.216;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+       transform="matrix(1.3333333,0,0,-1.3333333,0,100)" />
+    <path
+       id="path10"
+       d="m 200.406,42.258 v 7.265"
+       style="fill:none;stroke:#1f1917;stroke-width:0.216;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+       transform="matrix(1.3333333,0,0,-1.3333333,0,100)" />
+  </g>
+</svg>
