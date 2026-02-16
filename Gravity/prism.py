@@ -1,14 +1,14 @@
 import numpy as np
 
-def gz_prism(x, y, z, prism, rho):
+def gz_prism(obs=(0.0, 0.0, 0.0), prism=(1.0, 2.0, 1.0, 2.0, 1.0, 2.0), rho=2700.0):
     """
     Calculate the vertical gravity component gz (after Nagy 1966)
     at point (x, y, z) for a homogeneous rectangular prism.
 
     Parameters
     ----------
-    x, y, z : float
-        Observation point (in m)
+    obs : tuple
+        Observation point x, y, z (in m)
     prism : tuple
         Prism boundaries (x1, x2, y1, y2, z1, z2) in m
         (z1 and z2 relative to the same reference level as z)
@@ -21,6 +21,7 @@ def gz_prism(x, y, z, prism, rho):
         Vertical gravity component (in mGal)
     """
     G = 6.67430e-11
+    x, y, z = obs
     x1, x2, y1, y2, z1, z2 = prism
     gz = 0.0
 
