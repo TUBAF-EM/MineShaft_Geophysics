@@ -4,7 +4,7 @@ subtitle: "Borehole electrical resistivity"
 author:
   - name: "Mathias Scheunert"
     email: "mathias.scheunert@geophysik.tu-freiberg.de"
-  - name: Thomas Günther
+  - name: "Thomas Günther +4915771902824"
     email: "thomas.guenther@geophysik.tu-freiberg.de"
 
 title-slide-attributes:
@@ -36,6 +36,50 @@ format:
       side: left
 # jupyter: python3
 ---
+## Electrical conductivity
+
+:::: {.columns}
+::: {.column width="53%"}
+![Resistor](pics/resistor.png)
+
+* length $L$, cross-section area $A$
+* voltage $U$ [V], current $I$ [A]
+* Ohmic resistance $R$=$U$/$I$ [$\Omega$]
+:::
+::: {.column width="47%"}
+
+:::{.fragment}
+* current density $j$=$I$/$A$ [A/m²]
+* electric field $E$=$U$/$L$ [V/m]
+:::
+:::{.fragment}
+* **Ohm's law**<br>
+$j=\sigma E$ (conductivity $\sigma$ [A/Vm])
+$\Rightarrow$ resistivity $\rho=1/\sigma=E/j$ [$\Omega$m]
+:::
+:::{.fragment}
+$\Rightarrow \rho = \frac{U/L}{I/A}=\frac{U}{I}\frac{A}{L}=R\cdot k$
+geometric factor $k$ [m]
+:::
+:::
+::::
+
+## 4-point measurement (Knödel, 2005)
+
+![](pics/knoedelDE.png){fig-align="center"}
+
+## Geometric factor
+
+$U_{AM} = \rho I \frac{1}{4\pi \overline{AM}}$, $U_{AN} = \rho I \frac{1}{4\pi \overline{AN}}$ etc.
+
+$$ \Delta U = U_{AM} - U_{AN} - (U_{BM} - U_{BN}) $$
+
+$$ \Delta U = \rho I \big( \frac{1}{4\pi \overline{AM}} - \frac{1}{4\pi \overline{AN}} - \frac{1}{4\pi \overline{BM}} + \frac{1}{4\pi \overline{BN}}\big)$$
+
+$$ \Rightarrow \rho = \frac{\Delta U}{I} k \quad\mbox{with}\quad k = \frac{4\pi}{\frac{1}{\overline{AM}}-\frac{1}{\overline{AN}}-\frac{1}{\overline{BM}}+\frac{1}{\overline{BN}}} $$
+
+
+
 ## Experiment
 
 * Waterfilled horizontal borehole (approx. 9.5 m length)
@@ -95,6 +139,7 @@ AM=0.1m
 ## Data analysis
 ### Matlab
 - functions in folder [matlab](https://github.com/TUBAF-EM/MineShaft_Geophysics/tree/main/DCR/matlab): dike2.m, getDike.m
+- detailed explanation in the [report document](https://github.com/TUBAF-EM/MineShaft_Geophysics/tree/main/BLE)
 
 ### Python
 - functions in folder [python](https://github.com/TUBAF-EM/MineShaft_Geophysics/tree/main/DCR/matlab)

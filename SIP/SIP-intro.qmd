@@ -149,6 +149,7 @@ $$ \rho'(\omega) = \rho'(\infty) + \frac{2}{\pi}\int\limits_0^\infty \frac{x \rh
 :::
 ::: {.column}
 * Wenner array (AMNB)
+* dipole-dipole array (AB-MN)
 * constant spacing $a$
 * geometric factor $k=4\pi a$
 * EKG electrodes
