@@ -1,0 +1,309 @@
+---
+title: "Underground Geophysical Practical Course"
+subtitle: "Spectral Induced Polarization"
+author:
+  - name: Thomas Günther
+    email: "thomas.guenther@geophysik.tu-freiberg.de"
+  - name: "Jana Börner"
+    email: "jana.boerner@geo.uni-koeln.de"
+
+title-slide-attributes:
+  data-background-image: pics/tubaf-logo.png
+  data-background-size: 20%
+  data-background-position: 15% 97%
+format:
+  tubaf-revealjs:
+    theme: [custom]
+    html-math-method: mathjax
+    auto-stretch: true
+    include-in-header:
+        - text: |
+            <script>
+            window.MathJax = {
+            loader: {
+                load: ['[tex]/physics']
+            },
+            tex: {
+                packages: {'[+]': ['physics']}
+            }
+            };
+            </script>
+    slide-number: c/t
+    transition: fade
+    transition-speed: fast
+    # embed-resources: true
+    menu:
+      side: left
+# jupyter: python3
+---
+# Induced Polarization (IP)
+
+:::{.incremental}
+- increasing importance of ore deposits for raw material
+- ore minerals (e.g. sulphides or oxides) often conductors
+  * $\Rightarrow$ exploration with electromagnetic methods
+-  Schlumbergers (1930) & Dachnov (1941) observed chargeability
+- Method of Induced Polarisation (Bleil, 1953)
+  * traditional ore exploration with induced polarization
+- conductivity & polarization mechanisms of ores largely unknown
+- extracting probes and measuring cells hard $\Rightarrow$ in-situ
+:::
+
+
+## DC Equivalent (Dentith&Mudge, 2014)
+
+:::: {.columns}
+::: {.column width="45%"}
+![](pics/dm_fig53a.png)
+:::
+::: {.column width="45%"}
+![](pics/dm_fig53b.png)
+:::
+::::
+
+## AC Equivalent (Dentith&Mudge, 2014)
+
+:::: {.columns}
+::: {.column width="38%"}
+![](pics/dm_fig54.png)
+:::
+::: {.column width="51%"}
+![](pics/dm_fig56.png)
+:::
+::::
+
+
+## Time domain
+
+![Dentith & Mudge (2014)](pics/ipTD.png)
+
+## Frequency domain
+:::: {.columns}
+::: {.column width="53%"}
+![](pics/ipphase.png)
+:::
+::: {.column width="47%"}
+### Phase shift
+![Dentith & Mudge (2014)](pics/ipFD2.png)
+
+$$ \sigma^* = \sigma' + \imath\sigma'' = |\sigma| e^{\imath\phi} $$
+:::
+::::
+
+## Membrane Polarisation
+![Dentith & Mudge (2014)](pics/DentithMudge_fig519ab.png){width="73%"}
+
+##  Polarisation
+![](pics/DentithMudge_fig519cd.png){width="70%" fig-align="center"}
+
+## Relaxations
+
+:::: {.columns}
+::: {.column width="42%"}
+![Loewer et al. (2017)](pics/loewer_fig1.png)
+:::
+::: {.column width="55%"}
+### Debye relaxation
+
+* fundamental polarisation
+
+$$ \sigma(\omega)=\sigma_\infty + (\sigma_0-\sigma_\infty)\frac{m}{\imath\omega\tau} $$
+
+* exponential decay
+
+$$ U(t) = U_0 m e^{-t/\tau} $$
+:::
+::::
+
+## Debye and Cole-Cole models
+
+superposition of multiple decays
+
+$$ \rho^{\ast}(\omega) = \rho_0\left(  1 - \sum\limits_{k=1}^K m_k \left(1 - \frac{1}{1+\imath\omega\tau_k}\right) \right) $$
+
+relaxation width: Cole-Cole
+$$ \rho^{\ast}(\omega) = \rho^0 \left[1 - m \left(1 -  \frac{1}{1+(\imath\omega\tau)^c}\right) \right] $$
+
+
+## Kramers-Kronig relations
+
+Connect real und imaginary part of analytic functions
+
+$$ \rho''(\omega) = \frac{2\omega}{\pi}\int\limits_0^\infty \frac{\rho'(x)-\rho'(\omega)}{x^2-\omega^2}\dd x $$
+
+$$ \rho'(\omega) = \rho'(\infty) + \frac{2}{\pi}\int\limits_0^\infty \frac{x \rho''(x)-\omega\rho''(\omega)}{x^2-\omega^2}\dd x $$
+
+<!-- ## Spektrale Induzierte Polarisation (SIP)
+
+![](pics/ipspectra.png) -->
+
+# Measurement: SIP device
+
+![](pics/sip-device.png)
+
+## Plate electrodes (Rücker & Günther, 2011)
+
+:::: {.columns}
+::: {.column}
+![](pics/plate_electrodes.png)
+:::
+::: {.column}
+* Wenner array (AMNB)
+* constant spacing $a$
+* geometric factor $k=4\pi a$
+* EKG electrodes
+* point vs. plate electrodes
+* deformed potential & current
+* slightly changed sensitivity
+:::
+::::
+
+## SIP measurement
+![](pics/program1.png)
+
+## SIP measurement
+![](pics/program2.png)
+
+## SIP measurement
+![](pics/program3.png)
+
+# Data analysis
+<!-- ### Matlab
+- functions in folder [matlab](https://github.com/TUBAF-EM/MineShaft_Geophysics/tree/main/DCR/matlab): dike2.m, getDike.m -->
+
+**Python**
+
+- make use of [pyGIMLi](https://pygimli.org) package
+- `conda create -n pg -c gimli -c conda-forge` or
+- `pip install pygimli`
+- make use of class `SIPSpectrum`
+
+## Data analysis: raw data
+
+::: {.columns}
+::: {.column}
+```python
+spec = SIPSpectrum("example.res", k=k)
+print(spec)
+spec.showData()
+```
+
+```
+SIPSpectrum object
+nf=60 min/max=0.002512/45000.0
+```
+
+```
+(<Figure size 640x480 with 2 Axes>,
+ array([<Axes: title={'center': 'Py6p_grobA'}, xlabel='f (Hz)', ylabel='$\\rho$ ($\\Omega$m)'>,
+        <Axes: xlabel='f (Hz)', ylabel='$-\\phi$ (mrad)'>], dtype=object))
+```
+:::
+::: {.column}
+![](pics/ex/raw.svg){width="120%"}
+:::
+::::
+
+## Data analysis: check Kramers-Kronig
+::: {.columns}
+::: {.column}
+```python
+spec = SIPSpectrum("example.res")
+fig, ax = spec.showDataKK()
+fig.savefig("corrKK.svg")
+```
+
+:::
+::: {.column}
+![](pics/ex/rawKK.svg)
+:::
+::::
+
+## Data analysis: coupling removal
+::: {.columns}
+::: {.column}
+```python
+spec = SIPSpectrum("example.res")
+spec.removeEpsilonEffect()
+fig, ax = spec.showDataKK()
+```
+
+*  reliable data: $f$=100mHz-1kHz
+:::
+::: {.column}
+![](pics/ex/corrKK.svg)
+:::
+::::
+
+## Data analysis: filter
+::: {.columns}
+::: {.column}
+```python
+spec = SIPSpectrum("example.res")
+spec.removeEpsilonEffect()
+fig, ax = spec.showDataKK()
+spec.cutF(1000.0)
+spec.cutF(0.1, down=True)
+fig, ax = spec.showData()
+```
+:::
+::: {.column}
+![](pics/ex/filtered.svg)
+:::
+::::
+
+## Data analysis: fit Cole-Cole
+::: {.columns}
+::: {.column}
+```python
+spec = SIPSpectrum("example.res")
+spec.removeEpsilonEffect()
+fig, ax = spec.showDataKK()
+spec.cutF(1000.0)
+spec.cutF(0.1, down=True)
+spec.fitColeCole()
+fig, ax = spec.showAll()
+```
+:::
+::: {.column width="45%"}
+![](pics/ex/fitCC.svg)
+:::
+::::
+
+## Data analysis: Debye decomposition
+::: {.columns}
+::: {.column}
+```python
+spec = SIPSpectrum("example.res")
+spec.removeEpsilonEffect()
+fig, ax = spec.showDataKK()
+spec.cutF(1000.0)
+spec.cutF(0.1, down=True)
+spec.fitColeCole()
+spec.fitDebyeModel()
+fig, ax = spec.showAll()
+```
+:::
+::: {.column width="45%"}
+![](pics/ex/fitDD.svg)
+:::
+::::
+
+## Report
+
+1. Compute geometric factor for used array
+1. Load the data and plot them using `SIPSpectrum`
+1. Process (check KK, filter) the data
+1. Fit Cole & Debye models
+1. Repeat for all measured rock types
+1. Interpret the results
+1. Discuss possible error sources
+1. Evaluate applicability of the method & improvements
+
+## Further reading
+
+* Course material [DC resistivity & Electromagnetics methods](https://tubaf-em.github.io/Geoelektrik_Elektromagnetik/) (in German), including induced polarization
+* Dentith M and Mudge ST (2014): Geophysics for the mineral exploration geoscientist. Cambridge University Press
+* [pyGIMLi website](https://www.pygimli.org), specifically examples on IP
+* Rücker, C. & Günther, T. (2011): The simulation of Finite ERT electrodes using the complete
+electrode model. Geophysics 76(4), F227-238, [doi:10.1190/1.3581356](https://doi.org/10.1190/1.3581356).
