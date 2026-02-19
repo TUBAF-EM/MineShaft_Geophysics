@@ -1,4 +1,4 @@
-Teufe[m] KN[Ohm m] SB[Ohm m] OK[Ohm m] UK[Ohm m]
+depth[m]  KN[Ohmm]  SB[Ohmm]  OK[Ohmm]  UK[Ohmm]
    0.60   1906.95   2513.27   4058.94   1085.73
    0.80   1764.00   2314.73   2855.08   1759.29
    1.00   1586.50   2664.07   2065.91   3269.77
